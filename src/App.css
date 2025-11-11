@@ -1,0 +1,827 @@
+* {
+    margin: 0;
+}
+
+:root {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container {
+    background-color: rgb(227, 229, 230);
+}
+
+.navbar {
+    height: 40px;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    font-size: 14px;
+    background-color: white;
+
+}
+
+.logo-section {
+    width: 68%;
+    display: flex;
+    margin-left: 10px;
+    justify-content: space-between;
+    align-self: center;
+
+}
+
+.mgLogo {
+    width: 60px;
+
+}
+
+.login-section {
+    width: 8%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 50px;
+    align-self: center;
+    color: rgb(116, 116, 116);
+
+}
+
+.login-section>button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.login-section>button:hover {
+    cursor: pointer;
+}
+
+.overlay {
+    display: flex;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.signup-container {
+    display: flex;
+    width: 900px;
+    height: 500px;
+    padding: 20px;
+    border-radius: 7px;
+    text-align: center;
+    background-color: white;
+    justify-content: space-around;
+}
+
+.signup-img-container{
+    width: 40%;
+    padding-right: 50px;
+    align-content: center;
+    border-right: 1px solid rgb(245, 244, 244);
+}
+
+.signup-img-container>p{
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: 20px;
+    line-height: 1.4;
+}
+
+.signup-img-container>h1{
+    margin-top: 50px;
+}
+
+.login-container {
+    display: flex;
+    width: 900px;
+    height: 500px;
+    padding: 20px;
+    border-radius: 7px;
+    text-align: center;
+    justify-content: space-around;
+    background-color: white;
+}
+
+.input-section>div>input {
+    width: 350px;
+    height: 30px;
+    text-indent: 0.2cm;
+    border: none;
+    outline: none;
+    margin-top: 50px;
+    border-bottom: 2px solid orangered;
+}
+
+.register-btn, .login-btn{
+    width: 350px;
+    height: 40px;
+    border-radius: 7px;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    color: white;
+    margin-top: 30px;
+    background-color: orangered;
+}
+
+.register-btn, .login-btn:hover{
+    cursor: pointer;
+}
+
+.modal-close {
+    position: relative;
+    margin-left: 105%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.modal-close:hover {
+    cursor: pointer;
+}
+
+.signup-msg-nodal, .login-msg-nodal {
+    display: flex;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.signup-msg-container, .login-msg-container {
+    width: 400px;
+    height: 200px;
+    position: relative;
+    align-content: center;
+    text-align: center;
+    border-radius: 7px;
+    background-color: white;
+}
+
+.signup-msg-container>h1, .login-msg-container>h1 {
+    margin-bottom: 50px;
+}
+
+.signup-msg-container>button, .login-msg-container>button {
+    font-size: larger;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.signup-msg-container>button:hover, .login-msg-container>button:hover {
+    cursor: pointer;
+}
+
+.cart-section {
+    width: 17%;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    margin-right: 15px;
+    color: rgb(116, 116, 116);
+
+}
+
+.cart-section>button{
+    width: 20px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.cart-section>button:hover{
+    cursor: pointer;
+}
+
+.cart-section>button>img{
+    width: 20px;
+}
+
+.dark-mode-toggle {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.logo-section>h3:hover {
+    color: orangered;
+    cursor: pointer;
+}
+
+.search-section {
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+
+    background-color: rgb(254, 254, 254);
+}
+
+.location {
+    width: 63%;
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+
+}
+
+.location>select {
+    width: 25%;
+    height: 32px;
+    margin-right: 3px;
+    border: none;
+    outline: none;
+    background-color: rgb(238, 236, 236);
+
+}
+
+.search {
+    width: 90%;
+    height: 30px;
+    border: none;
+    outline: none;
+    background-color: rgb(238, 236, 236);
+}
+
+.search-input {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.search-icon-container {
+    height: 32px;
+    align-content: center;
+    background-color: rgb(238, 236, 236);
+}
+
+.map-icon-containe {
+    height: 32px;
+    align-content: center;
+    background-color: rgb(238, 236, 236);
+}
+
+.map-icon,
+.search-icon {
+    width: 15px;
+    height: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgb(238, 236, 236);
+}
+
+.search-icon:hover {
+    cursor: pointer;
+}
+
+.quick-order {
+    display: flex;
+
+    margin-right: 10px;
+    justify-content: space-between;
+}
+
+.quick-order-btn {
+    width: 120px;
+    height: 38px;
+    border: none;
+    outline: none;
+    color: white;
+    font-weight: bold;
+    margin-left: 10px;
+    border-radius: 5px;
+    background-color: orangered;
+}
+
+.quick-order>p {
+    align-self: center;
+}
+
+.product-nodal-container {
+    background-color: white;
+}
+
+.products {
+    display: flex;
+    width: 220px;
+    position: absolute;
+    justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: white;
+
+}
+
+.vitamin,
+.healthy {
+    display: flex;
+    width: 350px;
+    position: absolute;
+    justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: white;
+
+}
+
+.product-section {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    justify-content: space-around;
+    background-color: white;
+}
+
+.product-section>div {
+    background-color: white;
+}
+
+
+.healthy>div:nth-child(2)>h4,
+.vitamin>div:nth-child(2)>h4 {
+    border-left: 1px solid lightgray;
+    padding-left: 10px;
+}
+
+.products>div>h4,
+.healthy>div>h4,
+.vitamin>div>h4 {
+    font-size: small;
+    line-height: 2;
+    cursor: pointer;
+    background-color: white;
+}
+
+.products>div>h4:hover,
+.healthy>div>h4:hover,
+.vitamin>div>h4:hover {
+    color: orangered;
+}
+
+.products>div,
+.healthy>div,
+.vitamin>div {
+    padding: 10px;
+    background-color: white;
+}
+
+.nodal-btn {
+    height: 40px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    background-color: white;
+}
+
+.nodal-btn:hover {
+    color: orangered;
+}
+
+.nodal-btn>b {
+    font-size: large;
+    position: absolute;
+    margin-top: -9px;
+    margin-left: 5px;
+}
+
+.nodal-btn>b:hover {
+    color: orangered;
+}
+
+.front-img {
+    display: flex;
+    justify-content: center;
+}
+
+.slider-container {
+    width: 80%;
+    height: 260px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.slider-img {
+    width: 100%;
+    height: 260px;
+    object-fit: fill;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.nxt-btn {
+    position: absolute;
+    margin-top: 15%;
+    margin-left: 40%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.prev-btn {
+    position: absolute;
+    margin-top: 15%;
+    margin-left: 37%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.nppa-img {
+    width: 100%;
+    height: 100%;
+}
+
+.nppa-container {
+    width: 40%;
+}
+
+.lending-tag {
+    height: 80px;
+    background-color: white;
+    text-align: center;
+    align-content: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.lending-tag>h2 {
+    font-weight: 300;
+}
+
+.know-more {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.know-more>img {
+    width: 85%;
+    margin: auto;
+    align-self: center;
+}
+
+.know-more>img:hover {
+    cursor: pointer;
+}
+
+.health-concern-tag {
+    height: 60px;
+    align-content: end;
+    padding-bottom: 10px;
+}
+
+.health-concern-tag>h3 {
+    width: 85%;
+    margin: auto;
+    font-weight: 400;
+}
+
+.product-container {
+    margin: auto;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.product-container>div {
+    display: flex;
+}
+
+.product-container>div>div {
+    height: 200px;
+    display: flex;
+    margin: auto;
+    text-align: center;
+    justify-content: space-between;
+    background-color: white;
+
+}
+
+.product-item {
+    width: 180px;
+}
+
+.product-item:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.product-item>h4 {
+    margin-top: -23px;
+    font-weight: 400;
+}
+
+.product-img {
+    width: 120px;
+    padding: 30px;
+}
+
+.feature-brand-tag {
+    height: 60px;
+    margin: auto;
+    padding-bottom: 10px;
+    background-color: rgb(227, 229, 230);
+}
+
+.feature-brand-tag>h3 {
+    width: 85%;
+    height: 60px;
+    margin: auto;
+    align-content: end;
+    font-weight: 400;
+}
+
+.health-data {
+    width: 82%;
+}
+
+.product-data {
+    width: 19%;
+    height: 65%;
+    align-self: center;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.product-data:hover {
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.product-data>h4 {
+    height: 30%;
+    padding: 10px;
+}
+
+.product-data>p {
+    height: 40%;
+    align-content: end;
+}
+
+.saving-deal-container {
+    height: 380px;
+}
+
+.product-deals {
+    width: 19%;
+    height: 380px;
+    align-self: center;
+    border-radius: 10px;
+    margin-right: 5px;
+}
+
+.product-deals:hover {
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.product-deals>p {
+    height: 15%;
+    align-content: end;
+}
+
+.product-deals>img {
+    width: 100px;
+    height: 180px;
+    padding-top: 10px;
+}
+
+.footer {
+    margin-top: 30px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: white;
+    padding: 30px;
+    line-height: 2;
+}
+
+.footer-info {
+    padding-bottom: 30px;
+    border-bottom: 1px solid lightgray;
+}
+
+.footer-reach {
+    margin: auto;
+    text-align: center;
+}
+
+.footer-reach>div:first-child>h2 {
+    font-weight: 400;
+}
+
+.footer-visitor {
+    display: flex;
+    width: 95%;
+    margin: auto;
+    padding-bottom: 20px;
+    border-bottom: 1px solid lightgray;
+    justify-content: space-evenly;
+}
+
+.get-app {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 20px;
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 20px;
+}
+
+.get-app>div:first-child>h3 {
+    font-weight: 400;
+}
+
+.link-input {
+    width: 300px;
+    height: 35px;
+    padding-left: 20px;
+    border: none;
+    outline: none;
+    background-color: rgb(241, 240, 240);
+}
+
+.link-btn {
+    width: 110px;
+    height: 40px;
+    color: white;
+    background-color: lightcoral;
+    border: none;
+    outline: none;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+
+.link-btn:hover {
+    cursor: pointer;
+}
+
+.connect-section {
+    background-color: rgb(254, 253, 248);
+}
+
+.connect-section>div {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    padding-bottom: 40px;
+    border-bottom: 1px solid lightgray;
+    justify-content: space-between;
+}
+
+.connect-section>div>table>li {
+    list-style: none;
+    font-weight: lighter;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.connect-section>div>table>h4 {
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.social-link>div {
+    display: flex;
+    gap: 10px;
+}
+
+.social-link>div>img {
+    width: 30px;
+}
+
+.social-link>div>img:hover {
+    cursor: pointer;
+}
+
+.social-link>button {
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: lightcoral;
+}
+
+.social-link>button:hover {
+    cursor: pointer;
+}
+
+.app-link>div>img {
+    width: 130px;
+}
+
+.secure-section>div {
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.secure-section>div>div>p {
+    width: 250px;
+    font-weight: lighter;
+    font-size: small;
+    line-height: 1.5;
+}
+
+.secure-section>div>div>img {
+    width: 60px;
+}
+
+/* Dark Mode Styles */
+.dark {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.dark .navbar {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+.dark .login-section {
+    color: #cccccc;
+}
+
+.dark .search-section {
+    background-color: #1e1e1e;
+}
+
+.dark .location>select {
+    background-color: #2a2a2a;
+    color: #ffffff;
+}
+
+.dark .search {
+    background-color: #2a2a2a;
+    color: #ffffff;
+}
+
+.dark .map-icon-containe,
+.dark .search-icon-container {
+    background-color: #2a2a2a;
+}
+
+.dark .product-nodal-container {
+    background-color: #1e1e1e;
+}
+
+.dark .products,
+.dark .vitamin,
+.dark .healthy {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+.dark .products>div>h4:hover,
+.dark .healthy>div>h4:hover,
+.dark .vitamin>div>h4:hover {
+    color: orangered;
+}
+
+.dark .lending-tag {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+.dark .product-container {
+    background-color: #1e1e1e;
+}
+
+.dark .feature-brand-tag {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.dark .footer {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+.dark .connect-section {
+    background-color: #0f0f0f;
+}
+
+.dark .signup-container,
+.dark .login-container,
+.dark .signup-msg-container,
+.dark .login-msg-container {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+.dark .input-section>div>input {
+    background-color: #2a2a2a;
+    color: #ffffff;
+    border-bottom: 2px solid orangered;
+}
