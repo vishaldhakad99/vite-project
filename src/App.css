@@ -17,7 +17,7 @@
     justify-content: space-between;
     font-size: 14px;
     background-color: white;
-
+    position: relative;
 }
 
 .logo-section {
@@ -220,6 +220,71 @@
 .logo-section>h3:hover {
     color: orangered;
     cursor: pointer;
+}
+
+.menu-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 1000;
+    padding: 10px;
+}
+
+.mobile-menu-items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.mobile-menu-items h3 {
+    margin: 0;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+
+.mobile-menu-items h3:hover {
+    color: orangered;
+}
+
+.mobile-login-section,
+.mobile-cart-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.mobile-cart-section {
+    border-bottom: none;
 }
 
 .search-section {
@@ -824,4 +889,62 @@
     background-color: #2a2a2a;
     color: #ffffff;
     border-bottom: 2px solid orangered;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0 10px;
+    }
+
+    .logo-section {
+        width: auto;
+        flex: 1;
+    }
+
+    .menu-items {
+        display: none;
+    }
+
+    .login-section {
+        display: none;
+    }
+
+    .cart-section {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    .hamburger span {
+        background-color: #333;
+    }
+
+    .dark .hamburger span {
+        background-color: #ccc;
+    }
+
+    .dark .mobile-menu {
+        background-color: #1e1e1e;
+        color: #ffffff;
+    }
+
+    .dark .mobile-menu-items h3 {
+        border-bottom: 1px solid #444;
+    }
+
+    .dark .mobile-login-section,
+    .dark .mobile-cart-section {
+        border-bottom: 1px solid #444;
+    }
+
+    .dark .mobile-cart-section {
+        border-bottom: none;
+    }
 }

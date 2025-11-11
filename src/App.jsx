@@ -26,6 +26,7 @@ function App() {
   const [loginMsg, setLoginMsg] = useState(false);
   const [cart, setCart] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const images= [
     "/nycil.jpeg",
@@ -252,6 +253,10 @@ function App() {
     setDarkMode(!darkMode);
   }
 
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  }
+
 
   useEffect(() => {
     axios.get("https://tata-1mg-4rty.onrender.com/product/getProduct")
@@ -268,13 +273,15 @@ function App() {
         <nav className='navbar'>
           <div className='logo-section'>
             <img className='mgLogo' src="images/tata_1mg_logo.svg" alt="tata_1mg_logo" />
-            <h3>MEDICINES</h3>
-            <h3>LAB TESTS</h3>
-            <h3>CONSULT DOCTORS</h3>
-            <h3>CANCER CARE</h3>
-            <h3>AYURVEDA</h3>
-            <h3>PARNERSHIPS</h3>
-            <h3>CARE PLAN</h3>
+            <div className='menu-items'>
+              <h3>MEDICINES</h3>
+              <h3>LAB TESTS</h3>
+              <h3>CONSULT DOCTORS</h3>
+              <h3>CANCER CARE</h3>
+              <h3>AYURVEDA</h3>
+              <h3>PARNERSHIPS</h3>
+              <h3>CARE PLAN</h3>
+            </div>
           </div>
           <div className='login-section'>
             <button onClick={loginHandler}>Login</button>
@@ -354,7 +361,41 @@ function App() {
               {darkMode ? '☀️' : '🌙'}
             </button>
           </div>
+          <button className='hamburger' onClick={toggleMenu}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </nav>
+        {isMenuOpen && (
+          <div className='mobile-menu'>
+            <div className='mobile-menu-items'>
+              <h3>MEDICINES</h3>
+              <h3>LAB TESTS</h3>
+              <h3>CONSULT DOCTORS</h3>
+              <h3>CANCER CARE</h3>
+              <h3>AYURVEDA</h3>
+              <h3>PARNERSHIPS</h3>
+              <h3>CARE PLAN</h3>
+            </div>
+            <div className='mobile-login-section'>
+              <button onClick={loginHandler}>Login</button>
+              <p>|</p>
+              <button onClick={signupHandler}>Sign Up</button>
+            </div>
+            <div className='mobile-cart-section'>
+              <h4>Offers</h4>
+              {
+                cart &&
+                <button><img src="images/cart-icon.png" alt="cart-icon" /></button>
+              }
+              <h4>Need Help?</h4>
+              <button onClick={toggleDarkMode} className='dark-mode-toggle'>
+                {darkMode ? '☀️' : '🌙'}
+              </button>
+            </div>
+          </div>
+        )}
         <div className='search-section'>
           <div className='location'>
             <div className='map-icon-containe'>
